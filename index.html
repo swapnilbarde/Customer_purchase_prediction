@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Customer Purchase Prediction</title>
+
+
+</head>
+<body>
+    <h1>Customer Purchase Prediction</h1>
+    <p>
+        Enter the following details about customer
+    </p>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="number" name="gender" placeholder="Gender of Customer" required="required" />
+        <input type="number" name="age" placeholder="Age of Customer" required="required" />
+		<input type="number" name="salary" placeholder="Salary of" required="required" />
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+    
+    <p>
+        Your prediction is:
+    </p>
+    {{ prediction_text }}
+</body>
+</html>
